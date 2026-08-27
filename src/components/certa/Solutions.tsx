@@ -1,114 +1,58 @@
-import { useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
 import { Reveal } from "./primitives";
+import { SectionHead } from "./ui";
 
 const ITEMS = [
   {
-    q: "What's running?",
-    a: "Discover and inventory AI agents.",
-    ui: [
-      ["Invoice Agent", "Production"],
-      ["Support Agent", "Production"],
-      ["Research Agent", "Unowned"],
-    ],
+    name: "Financial Services",
+    copy: "Agents moving money, updating financial records, reviewing transactions.",
+    q: "Was the action within the agent's authority?",
   },
   {
-    q: "Who owns it?",
-    a: "Establish accountable business and technical ownership.",
-    ui: [
-      ["Business owner", "Finance"],
-      ["Technical owner", "Platform Eng"],
-      ["Escalation", "On-call AP"],
-    ],
+    name: "Customer Support",
+    copy: "Agents issuing refunds, modifying accounts, communicating with customers.",
+    q: "What did the agent change and was it allowed?",
   },
   {
-    q: "What can it do?",
-    a: "Understand the authority and permissions surrounding an agent.",
-    ui: [
-      ["SAP", "write:invoice"],
-      ["S3", "read:documents"],
-      ["Limit", "$10,000"],
-    ],
+    name: "Software & IT",
+    copy: "Agents calling APIs, querying databases, changing infrastructure.",
+    q: "Which agent made the change?",
   },
   {
-    q: "What did it do?",
-    a: "Reconstruct activity into understandable timelines.",
-    ui: [
-      ["10:42:06", "Invoice evaluated"],
-      ["10:42:09", "SAP accessed"],
-      ["10:42:11", "$17,300 approved"],
-    ],
+    name: "Procurement & Supply Chain",
+    copy: "Agents creating purchase orders and interacting with suppliers.",
+    q: "Did the agent exceed its purchasing authority?",
   },
   {
-    q: "Did it cross a boundary?",
-    a: "Evaluate actions against defined policies and approval rules.",
-    ui: [
-      ["Policy", "Max $10,000"],
-      ["Observed", "$17,300"],
-      ["Result", "Violation"],
-    ],
+    name: "Healthcare Operations",
+    copy: "Agents interacting with operational systems and workflows.",
+    q: "What did the agent access and who owns it?",
   },
   {
-    q: "Can we prove it?",
-    a: "Preserve evidence around important activity.",
-    ui: [
-      ["Action ID", "act_829fa21"],
-      ["Captured", "10:42:11"],
-      ["Integrity", "Verified ✓"],
-    ],
+    name: "Manufacturing",
+    copy: "Agents interacting with production and operational workflows.",
+    q: "What changed and was the action authorized?",
   },
 ];
 
 export function Solutions() {
-  const [active, setActive] = useState<number | null>(null);
-
   return (
-    <section id="solutions" className="relative py-32 lg:py-44">
+    <section id="solutions" className="py-24 lg:py-32">
       <div className="shell">
         <Reveal>
-          <h2 className="display-lg max-w-2xl">Questions Certa helps answer.</h2>
+          <SectionHead eyebrow="Solutions" title="One Accountability Layer. Different Business Actions." />
         </Reveal>
 
-        <div className="mt-20 grid border-l border-t border-hairline sm:grid-cols-2 lg:grid-cols-3">
-          {ITEMS.map((it, i) => (
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {ITEMS.map((it) => (
             <div
-              key={it.q}
-              onMouseEnter={() => setActive(i)}
-              onMouseLeave={() => setActive(null)}
-              className="relative min-h-[260px] border-b border-r border-hairline p-8 transition-colors duration-500"
-              style={{
-                backgroundColor: active === i ? "var(--surface)" : "transparent",
-              }}
+              key={it.name}
+              className="flex h-full flex-col border border-border bg-surface p-7 transition-colors duration-200 hover:border-signal/40"
             >
-              <span className="font-mono text-[11px] text-signal">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <h3 className="mt-6 font-display text-2xl tracking-tight">{it.q}</h3>
-              <p className="mt-3 max-w-[24ch] text-[14px] text-muted-foreground">{it.a}</p>
-
-              <AnimatePresence>
-                {active === i && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 6 }}
-                    transition={{ duration: 0.35 }}
-                    className="mt-7 border border-hairline"
-                  >
-                    {it.ui.map(([k, v]) => (
-                      <div
-                        key={k}
-                        className="flex items-center justify-between border-b border-hairline px-3 py-2 last:border-b-0"
-                      >
-                        <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
-                          {k}
-                        </span>
-                        <span className="font-mono text-[11px]">{v}</span>
-                      </div>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              <div className="font-display text-[17px]">{it.name}</div>
+              <p className="mt-3 text-[13.5px] leading-relaxed text-muted-foreground">{it.copy}</p>
+              <div className="mt-auto border-t border-hairline pt-5 text-[13.5px] text-signal">
+                {it.q}
+              </div>
             </div>
           ))}
         </div>
