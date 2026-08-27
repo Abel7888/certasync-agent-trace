@@ -1,35 +1,20 @@
-import { CTA, Label, Reveal } from "./primitives";
+import { DEMO_LINK } from "./ui";
 
 export function FinalCta() {
   return (
-    <section id="book" className="relative py-40 lg:py-56">
+    <section className="py-28 lg:py-36">
       <div className="shell">
-        <Label>Certa Systems</Label>
-
-        <Reveal>
-          <h2 className="display-xl mt-16 max-w-4xl">
-            Your agents are starting to act.
-            <span className="mt-4 block text-muted-foreground">Know what happens next.</span>
-          </h2>
-        </Reveal>
-
-        <Reveal delay={0.1}>
-          <p className="mt-14 max-w-lg text-[17px] leading-relaxed text-muted-foreground">
-            If you're putting AI agents into real workflows, we'd like to show you what Certa is
-            building.
-          </p>
-        </Reveal>
-
-        <Reveal delay={0.15}>
-          <div className="mt-16 flex flex-wrap items-center gap-4">
-            <CTA href="mailto:hello@certa.systems?subject=Certa%20demo">Book a Demo</CTA>
-            <CTA variant="ghost" href="#demo">
-              Watch the Demo →
-            </CTA>
-          </div>
-        </Reveal>
-
-        <div className="label-tech mt-14">Early pilots available.</div>
+        <h2 className="display-lg max-w-3xl">
+          As Agents Gain Authority, Accountability Has to Keep Up.
+        </h2>
+        <div className="mt-10">
+          <a
+            href={DEMO_LINK}
+            className="inline-flex rounded-sm bg-signal px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
+          >
+            Book a Demo
+          </a>
+        </div>
       </div>
     </section>
   );
@@ -37,20 +22,22 @@ export function FinalCta() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-hairline py-16">
-      <div className="shell grid gap-12 md:grid-cols-[minmax(0,1fr)_auto_auto]">
-        <div>
-          <div className="font-display text-[15px] tracking-[0.3em]">CERTA</div>
-          <div className="mt-3 text-[13px] text-muted-foreground">Accountability for AI agents.</div>
+    <footer className="border-t border-hairline py-12">
+      <div className="shell flex flex-wrap items-center justify-between gap-6">
+        <div className="flex items-center gap-2.5">
+          <span className="h-2 w-2 rounded-[2px] bg-signal" />
+          <span className="font-display text-[14px]">Certa Systems</span>
+          <span className="text-[13px] text-muted-foreground">
+            · Know the agent. Know the owner.
+          </span>
         </div>
 
         <nav className="flex flex-wrap gap-x-8 gap-y-3">
           {[
             ["Platform", "#platform"],
             ["Solutions", "#solutions"],
-            ["Industries", "#industries"],
-            ["About", "#about"],
-            ["Contact", "#book"],
+            ["Security", "#security"],
+            ["Pilot Program", "#pilot"],
           ].map(([l, h]) => (
             <a
               key={l}
@@ -61,14 +48,6 @@ export function Footer() {
             </a>
           ))}
         </nav>
-
-        <div className="flex gap-8">
-          {["Privacy", "Terms"].map((l) => (
-            <span key={l} className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
-              {l}
-            </span>
-          ))}
-        </div>
       </div>
     </footer>
   );

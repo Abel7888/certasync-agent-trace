@@ -2,21 +2,20 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { Nav } from "@/components/certa/Nav";
 import { Hero } from "@/components/certa/Hero";
-import { Shift } from "@/components/certa/Shift";
-import { Product } from "@/components/certa/Product";
-import { Model } from "@/components/certa/Model";
-import { Stories } from "@/components/certa/Stories";
-import { OneAction } from "@/components/certa/OneAction";
-import { DemoSection } from "@/components/certa/DemoSection";
+import { CoreMessage } from "@/components/certa/CoreMessage";
+import { FeatureHighlight } from "@/components/certa/FeatureHighlight";
+import { Ownership } from "@/components/certa/Ownership";
+import { PolicyRisk } from "@/components/certa/PolicyRisk";
+import { Roadmap } from "@/components/certa/Roadmap";
 import { Solutions } from "@/components/certa/Solutions";
-import { Industries } from "@/components/certa/Industries";
-import { Architecture } from "@/components/certa/Architecture";
-import { Manifesto } from "@/components/certa/Manifesto";
+import { Security } from "@/components/certa/Security";
+import { WhyCerta } from "@/components/certa/WhyCerta";
+import { PilotProgram } from "@/components/certa/PilotProgram";
 import { FinalCta, Footer } from "@/components/certa/FinalCta";
 
-const title = "Certa Systems — Accountability for AI agents";
+const title = "Certa Systems — AI Agent Accountability Platform";
 const description =
-  "Certa creates a clear record around autonomous AI activity — connecting agents to ownership, authority, policy, actions and evidence.";
+  "Know which AI agents are running, who owns them, what they did, whether they stayed within policy, and the evidence behind important decisions.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -38,16 +37,15 @@ function Index() {
       <Nav />
       <main>
         <Hero />
-        <Shift />
-        <Product />
-        <Model />
-        <Stories />
-        <OneAction />
-        <DemoSection />
+        <CoreMessage />
+        <FeatureHighlight />
+        <Ownership />
+        <PolicyRisk />
+        <Roadmap />
         <Solutions />
-        <Industries />
-        <Architecture />
-        <Manifesto />
+        <Security />
+        <WhyCerta />
+        <PilotProgram />
         <FinalCta />
       </main>
       <Footer />
