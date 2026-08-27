@@ -50,32 +50,32 @@
 :root {
   --radius: 0.25rem;
 
-  --background: oklch(0.155 0.005 260);
-  --foreground: oklch(0.955 0.008 85);
+  --background: oklch(0.185 0.018 258);
+  --foreground: oklch(0.975 0.003 250);
 
-  --surface: oklch(0.185 0.006 260);
-  --surface-2: oklch(0.215 0.007 260);
+  --surface: oklch(0.215 0.017 258);
+  --surface-2: oklch(0.25 0.017 258);
 
-  --card: oklch(0.185 0.006 260);
-  --card-foreground: oklch(0.955 0.008 85);
-  --popover: oklch(0.185 0.006 260);
-  --popover-foreground: oklch(0.955 0.008 85);
+  --card: oklch(0.215 0.017 258);
+  --card-foreground: oklch(0.975 0.003 250);
+  --popover: oklch(0.215 0.017 258);
+  --popover-foreground: oklch(0.975 0.003 250);
 
-  --primary: oklch(0.955 0.008 85);
-  --primary-foreground: oklch(0.155 0.005 260);
-  --secondary: oklch(0.24 0.007 260);
-  --secondary-foreground: oklch(0.955 0.008 85);
+  --primary: oklch(0.975 0.003 250);
+  --primary-foreground: oklch(0.185 0.018 258);
+  --secondary: oklch(0.26 0.016 258);
+  --secondary-foreground: oklch(0.975 0.003 250);
 
-  --muted: oklch(0.24 0.007 260);
-  --muted-foreground: oklch(0.66 0.008 265);
+  --muted: oklch(0.26 0.016 258);
+  --muted-foreground: oklch(0.72 0.012 256);
 
-  --accent: oklch(0.24 0.007 260);
-  --accent-foreground: oklch(0.955 0.008 85);
+  --accent: oklch(0.26 0.016 258);
+  --accent-foreground: oklch(0.975 0.003 250);
 
-  --signal: oklch(0.82 0.14 176);
-  --signal-dim: oklch(0.82 0.14 176 / 0.28);
-  --risk: oklch(0.72 0.17 45);
-  --ok: oklch(0.82 0.14 176);
+  --signal: oklch(0.68 0.15 250);
+  --signal-dim: oklch(0.68 0.15 250 / 0.28);
+  --risk: oklch(0.74 0.15 60);
+  --ok: oklch(0.75 0.12 165);
 
   --destructive: oklch(0.65 0.2 27);
   --destructive-foreground: oklch(0.97 0.005 85);
@@ -83,7 +83,7 @@
   --border: oklch(1 0 0 / 9%);
   --hairline: oklch(1 0 0 / 6%);
   --input: oklch(1 0 0 / 12%);
-  --ring: oklch(0.82 0.14 176 / 0.5);
+  --ring: oklch(0.68 0.15 250 / 0.5);
 }
 
 @layer base {
@@ -105,7 +105,7 @@
 
   ::selection {
     background: var(--signal);
-    color: oklch(0.155 0.005 260);
+    color: oklch(0.98 0 0);
   }
 }
 
@@ -122,7 +122,7 @@
   font-weight: 400;
   letter-spacing: -0.035em;
   line-height: 0.98;
-  font-size: clamp(2.75rem, 7vw, 6rem);
+  font-size: clamp(2.5rem, 5.4vw, 4.25rem);
 }
 
 @utility display-lg {
@@ -130,7 +130,7 @@
   font-weight: 400;
   letter-spacing: -0.03em;
   line-height: 1.02;
-  font-size: clamp(2.25rem, 5vw, 4rem);
+  font-size: clamp(1.9rem, 3.6vw, 2.9rem);
 }
 
 @utility display-md {
@@ -138,7 +138,7 @@
   font-weight: 400;
   letter-spacing: -0.025em;
   line-height: 1.1;
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
 }
 
 @utility grid-lines {
@@ -154,7 +154,7 @@
 
 @utility shell {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1200px;
   margin-inline: auto;
   padding-inline: 1.5rem;
 }
