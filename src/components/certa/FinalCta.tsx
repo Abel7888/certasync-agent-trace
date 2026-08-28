@@ -49,6 +49,16 @@ export function Footer() {
           ))}
         </nav>
       </div>
+
+      <div className="shell mt-10 flex flex-col gap-3 text-[12px] text-muted-foreground lg:flex-row lg:items-center lg:justify-between">
+        <p>© {new Date().getFullYear()} Certa Systems. All rights reserved.</p>
+        <p>
+          Alexandria, VA ·{" "}
+          <a href="mailto:info@certasystem.xyz" className="transition-colors hover:text-foreground">
+            info@certasystem.xyz
+          </a>
+        </p>
+      </div>
     </footer>
   );
 }
