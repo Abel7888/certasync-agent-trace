@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-export const DEMO_LINK = "https://calendly.com/certasystems/demo";
+export const DEMO_LINK = "https://calendly.com/abelassefa788/introduction";
 
 export function Card({ children, className }: { children: ReactNode; className?: string }) {
   return (
