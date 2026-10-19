@@ -182,3 +182,1176 @@
     stroke-dashoffset: -24;
   }
 }
+
+/* Pilot acquisition experience: preserve Certa's graphite and signal-blue identity. */
+.pilot-page {
+  --pilot-blue: #69b4ff;
+  --pilot-line: #ffffff1c;
+  --pilot-copy: #b4bfcb;
+  background: #0c121b;
+  color: #f4f6f8;
+  overflow: clip;
+}
+.pilot-page *,
+.pilot-page *::before,
+.pilot-page *::after {
+  box-sizing: border-box;
+}
+.pilot-page :where(a, button, summary):focus-visible {
+  outline: 3px solid #86c6ff;
+  outline-offset: 5px;
+}
+.pilot-page :where(section, main) {
+  scroll-margin-top: 90px;
+}
+.pilot-page a {
+  text-decoration: none;
+}
+.pilot-page button {
+  font: inherit;
+  cursor: pointer;
+}
+.pilot-page h1,
+.pilot-page h2,
+.pilot-page h3,
+.pilot-page h4,
+.pilot-page p {
+  margin: 0;
+}
+.pilot-page h1,
+.pilot-page h2,
+.pilot-page h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+.pilot-page .shell {
+  max-width: 1280px;
+  padding-inline: 40px;
+}
+.pilot-skip {
+  position: fixed;
+  top: -100px;
+  left: 20px;
+  z-index: 100;
+  padding: 12px 20px;
+  background: white;
+  color: #101b27;
+}
+.pilot-skip:focus {
+  top: 15px;
+}
+.pilot-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: -0.6px;
+  white-space: nowrap;
+}
+.pilot-brand-systems {
+  color: #b4bfcb;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+}
+.pilot-brand-mark {
+  display: grid;
+  grid-template-columns: repeat(3, 4px);
+  gap: 3px;
+  height: 23px;
+  align-items: center;
+}
+.pilot-brand-mark i {
+  display: block;
+  height: 13px;
+  background: var(--pilot-blue);
+}
+.pilot-brand-mark i:nth-child(2) {
+  height: 23px;
+}
+.pilot-brand-mark i:nth-child(3) {
+  height: 18px;
+}
+.pilot-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #0c121bf2;
+  border-bottom: 1px solid var(--pilot-line);
+  backdrop-filter: blur(16px);
+}
+.pilot-nav-inner {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.pilot-desktop-nav {
+  display: flex;
+  gap: 30px;
+  font-size: 13px;
+  color: var(--pilot-copy);
+}
+.pilot-desktop-nav a:hover,
+.pilot-footer nav a:hover {
+  color: var(--pilot-blue);
+}
+.pilot-nav-cta {
+  display: inline-flex;
+  gap: 15px;
+  align-items: center;
+  border: 1px solid #5488bb70;
+  padding: 11px 17px;
+  font-size: 13px;
+  background: #132437;
+}
+.pilot-menu {
+  display: none;
+}
+.pilot-mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-block: 20px;
+  font-size: 15px;
+  border-top: 1px solid var(--pilot-line);
+}
+.pilot-hero {
+  padding-top: 78px;
+  background: radial-gradient(ellipse at 78% 25%, #19416a26, transparent 58%);
+  position: relative;
+}
+.pilot-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(#ffffff03 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff03 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: linear-gradient(black, transparent 90%);
+}
+.pilot-hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.06fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.pilot-availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  color: #b4c9de;
+  margin-bottom: 29px;
+}
+.pilot-availability > span,
+.pilot-live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7ac8b1;
+  display: inline-block;
+}
+.pilot-hero h1 {
+  font-size: clamp(40px, 4.7vw, 65px);
+  line-height: 1.06;
+  letter-spacing: -0.055em;
+}
+.pilot-hero h1 > span {
+  color: var(--pilot-blue);
+}
+.pilot-hero-copy > p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--pilot-copy);
+  margin-top: 26px;
+  max-width: 470px;
+}
+.pilot-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  margin-top: 34px;
+}
+.pilot-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 21px;
+  background: #84c1ff;
+  color: #091828;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #84c1ff;
+  border-radius: 3px;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.pilot-button:hover {
+  background: #afd6ff;
+  transform: translateY(-2px);
+}
+.pilot-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--pilot-blue);
+  line-height: 1.5;
+}
+.pilot-text-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.pilot-hero-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+  font-size: 11px;
+  color: #a7b5c4;
+}
+.pilot-hero-proof span {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
+.pilot-hero-proof svg {
+  color: #88c3ae;
+}
+.pilot-console {
+  background: #111d2a;
+  border: 1px solid #3755738c;
+  border-radius: 8px;
+  box-shadow: 0 35px 80px #0005;
+  overflow: hidden;
+}
+.pilot-console-top {
+  padding: 16px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--pilot-line);
+}
+.pilot-console-top > span:first-child {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  font-size: 12px;
+}
+.pilot-console-top > span:last-child,
+.pilot-small-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: #a6b8cb;
+  text-transform: uppercase;
+}
+.pilot-switch {
+  display: flex;
+  padding: 14px 20px 0;
+  gap: 5px;
+}
+.pilot-switch button {
+  flex: 1;
+  padding: 9px 5px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  color: #a9bbcc;
+  background: transparent;
+  font-size: 11px;
+}
+.pilot-switch button[aria-pressed="true"] {
+  border-color: #5993ca5c;
+  background: #23476b66;
+  color: #b9dcff;
+}
+.pilot-console-body {
+  padding: 22px;
+  min-height: 474px;
+}
+.pilot-agent-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.pilot-agent-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  height: 43px;
+  width: 43px;
+  border: 1px solid #6297c84d;
+  background: #18344e;
+  color: var(--pilot-blue);
+  border-radius: 5px;
+}
+.pilot-agent-line h2 {
+  font-size: 18px;
+  margin-top: 3px;
+  line-height: 1.3;
+}
+.pilot-owner {
+  margin-block: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--pilot-line);
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  font-size: 11px;
+}
+.pilot-owner > span:first-child {
+  color: #a6b8cb;
+}
+.pilot-owner > span:last-child {
+  text-align: right;
+}
+.pilot-event p {
+  font-size: 21px;
+  line-height: 1.35;
+  letter-spacing: -0.5px;
+  margin-top: 7px;
+  min-height: 57px;
+}
+.pilot-event code {
+  color: #a4b9ce;
+  font-size: 10px;
+  display: block;
+  margin-top: 9px;
+  overflow-wrap: anywhere;
+}
+.pilot-policy {
+  border-left: 2px solid #d8aa68;
+  padding: 13px 15px;
+  margin-top: 21px;
+  background: #d8aa6809;
+}
+.pilot-policy > p {
+  color: #c4ced7;
+  font-size: 12px;
+  margin-top: 4px;
+}
+.pilot-policy > div {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 13px;
+  color: #f0c58a;
+  font-size: 12px;
+}
+.pilot-status-dot {
+  width: 5px;
+  height: 5px;
+  background: #f0c58a;
+  border-radius: 50%;
+}
+.pilot-policy > span:last-child {
+  display: block;
+  font-size: 11px;
+  color: #c7b397;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+.pilot-evidence {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 20px;
+  color: #91c4f8;
+}
+.pilot-evidence > div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 4px;
+}
+.pilot-evidence strong {
+  font-size: 11px;
+  font-weight: 500;
+  color: #c3d8ec;
+}
+.pilot-evidence span {
+  font-size: 10px;
+  color: #9baec1;
+}
+.pilot-console-note {
+  margin-top: 14px !important;
+  color: #91a4b8;
+  font-size: 10px;
+  line-height: 1.6;
+}
+.pilot-hero-bottom {
+  position: relative;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 67px;
+  padding-block: 27px;
+  border-top: 1px solid var(--pilot-line);
+  border-bottom: 1px solid var(--pilot-line);
+  font-size: 12px;
+}
+.pilot-hero-bottom > span {
+  color: #889bae;
+  font-size: 11px;
+}
+.pilot-hero-bottom > div {
+  display: flex;
+  gap: 42px;
+  color: #b7c6d6;
+}
+.pilot-section {
+  padding-block: 104px;
+}
+.pilot-eyebrow {
+  font-family: var(--font-mono);
+  color: var(--pilot-blue);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  display: block;
+  margin-bottom: 20px;
+}
+.pilot-page section h2 {
+  font-size: clamp(32px, 3.8vw, 49px);
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+}
+.pilot-muted {
+  color: #90a1b3;
+}
+.pilot-section-heading {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 75px;
+  align-items: end;
+  margin-bottom: 48px;
+}
+.pilot-section-heading > p {
+  color: var(--pilot-copy);
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 410px;
+}
+.pilot-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-block: 1px solid var(--pilot-line);
+}
+.pilot-pillars article {
+  padding: 28px 32px 30px 0;
+}
+.pilot-pillars article + article {
+  border-left: 1px solid var(--pilot-line);
+  padding-left: 32px;
+}
+.pilot-pillar-index {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: #94a7ba;
+  display: block;
+  margin-bottom: 29px;
+}
+.pilot-pillars svg {
+  color: var(--pilot-blue);
+  margin-bottom: 19px;
+}
+.pilot-pillars h3 {
+  font-size: 23px;
+  line-height: 1.25;
+  letter-spacing: -0.6px;
+}
+.pilot-pillars p {
+  color: var(--pilot-copy);
+  font-size: 13px;
+  line-height: 1.8;
+  margin-top: 13px;
+}
+.pilot-pillars ul {
+  list-style: none;
+  padding: 18px 0 0;
+  margin: 0;
+}
+.pilot-pillars li {
+  color: #c7d3e0;
+  font-size: 12px;
+  padding-block: 6px;
+  display: flex;
+  gap: 10px;
+}
+.pilot-pillars li::before {
+  content: "+";
+  color: #6a9dcd;
+}
+.pilot-footnote {
+  color: #92a4b6;
+  font-size: 11px;
+  line-height: 1.8;
+  margin-top: 20px !important;
+  max-width: 800px;
+}
+.pilot-walkthrough {
+  background: #e8edf1;
+  color: #182a3c;
+}
+.pilot-walkthrough .pilot-eyebrow {
+  color: #2b648e;
+}
+.pilot-walkthrough .pilot-section-heading > p {
+  color: #536577;
+}
+.pilot-walkthrough-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  border: 1px solid #243f5a30;
+  border-radius: 5px;
+  background: #f7f9fa;
+  overflow: hidden;
+}
+.pilot-steps {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  gap: 7px;
+  border-right: 1px solid #243f5a25;
+  justify-content: center;
+}
+.pilot-steps button {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 19px 16px;
+  color: #506579;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  text-align: left;
+  font-size: 14px;
+}
+.pilot-steps button > span {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: #607d97;
+}
+.pilot-steps button svg {
+  margin-left: auto;
+}
+.pilot-steps button[aria-pressed="true"] {
+  color: #153e61;
+  border-color: #6c9dc54d;
+  background: #e4eef6;
+}
+.pilot-step-detail {
+  padding: 38px;
+  min-height: 364px;
+}
+.pilot-walkthrough .pilot-small-label {
+  color: #56728a;
+}
+.pilot-step-detail h3 {
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: -0.6px;
+  margin-top: 18px;
+}
+.pilot-step-detail > p {
+  color: #52667a;
+  font-size: 13px;
+  line-height: 1.8;
+  margin-top: 14px;
+}
+.pilot-step-detail dl {
+  margin: 22px 0 0;
+}
+.pilot-step-detail dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding-block: 10px;
+  border-top: 1px solid #243f5a20;
+  font-size: 11px;
+}
+.pilot-step-detail dt {
+  color: #60758a;
+}
+.pilot-step-detail dd {
+  margin: 0;
+  text-align: right;
+}
+.pilot-observer-note {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 30px;
+  margin-top: 22px;
+  align-items: baseline;
+}
+.pilot-observer-note p {
+  font-size: 11px;
+  line-height: 1.8;
+  color: #536577;
+}
+.pilot-workflow-select {
+  display: flex;
+  border-bottom: 1px solid var(--pilot-line);
+  gap: 32px;
+}
+.pilot-workflow-select button {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding: 0 0 17px;
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: #90a1b3;
+}
+.pilot-workflow-select button[aria-pressed="true"] {
+  color: #dcecff;
+  border-color: var(--pilot-blue);
+}
+.pilot-workflow-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding-top: 39px;
+  min-height: 354px;
+}
+.pilot-workflow-content h3 {
+  font-size: 31px;
+  line-height: 1.25;
+  letter-spacing: -0.8px;
+}
+.pilot-workflow-content > div > p {
+  color: var(--pilot-copy);
+  font-size: 14px;
+  line-height: 1.8;
+  margin-block: 18px 26px;
+}
+.pilot-scenario-list > div {
+  display: flex;
+  gap: 21px;
+  border-bottom: 1px solid var(--pilot-line);
+  padding-block: 18px;
+}
+.pilot-scenario-list > div:first-child {
+  padding-top: 0;
+}
+.pilot-scenario-list > div > span {
+  color: #7798b8;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding-top: 3px;
+}
+.pilot-scenario-list h4 {
+  font-weight: 500;
+  font-size: 14px;
+}
+.pilot-scenario-list p {
+  font-size: 13px;
+  color: var(--pilot-copy);
+  line-height: 1.8;
+  margin-top: 7px;
+}
+.pilot-offer {
+  background: #142d45;
+  border-block: 1px solid #476b8f66;
+}
+.pilot-offer-heading {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 90px;
+  align-items: center;
+}
+.pilot-offer-heading h2 {
+  font-size: clamp(42px, 5vw, 65px) !important;
+}
+.pilot-offer-heading h2 > span {
+  color: #8fc7ff;
+}
+.pilot-offer-heading p {
+  color: #c0d0e1;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+.pilot-offer-heading .pilot-button {
+  margin-top: 10px;
+}
+.pilot-call-note {
+  display: block;
+  color: #a1b7cd;
+  font-size: 11px;
+  margin-top: 16px;
+  line-height: 1.7;
+}
+.pilot-offer-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 38px;
+  border-top: 1px solid #ffffff24;
+  margin-top: 49px;
+  padding-top: 27px;
+}
+.pilot-offer-steps article > span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #87b4dd;
+}
+.pilot-offer-steps h3 {
+  font-size: 21px;
+  margin-block: 12px 10px;
+}
+.pilot-offer-steps p {
+  color: #b4c9de;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.pilot-inclusions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 32px;
+  margin-top: 34px;
+  padding-top: 24px;
+  border-top: 1px solid #ffffff24;
+}
+.pilot-inclusions span {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  font-size: 11px;
+  color: #c6dcf0;
+}
+.pilot-inclusions svg {
+  color: #93c8bb;
+}
+.pilot-security-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+}
+.pilot-body-copy {
+  color: var(--pilot-copy);
+  font-size: 14px;
+  line-height: 1.9;
+  margin-block: 23px !important;
+  max-width: 390px;
+}
+.pilot-security-list article {
+  display: flex;
+  gap: 22px;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid var(--pilot-line);
+}
+.pilot-security-list article > svg {
+  color: var(--pilot-blue);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.pilot-security-list h3 {
+  font-size: 19px;
+}
+.pilot-security-list article p {
+  color: var(--pilot-copy);
+  font-size: 13px;
+  line-height: 1.8;
+  margin-top: 9px;
+}
+.pilot-faq-section {
+  border-block: 1px solid var(--pilot-line);
+  padding-block: 75px;
+}
+.pilot-faq-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 70px;
+}
+.pilot-faq details {
+  border-bottom: 1px solid var(--pilot-line);
+}
+.pilot-faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  padding-block: 22px;
+  font-size: 14px;
+  list-style: none;
+  cursor: pointer;
+}
+.pilot-faq details:first-child summary {
+  padding-top: 0;
+}
+.pilot-faq summary::-webkit-details-marker {
+  display: none;
+}
+.pilot-faq summary svg {
+  flex-shrink: 0;
+  color: #95aec8;
+  transition: transform 0.2s;
+}
+.pilot-faq details[open] summary svg {
+  transform: rotate(180deg);
+}
+.pilot-faq details p {
+  padding-bottom: 23px;
+  color: var(--pilot-copy);
+  font-size: 13px;
+  line-height: 1.9;
+}
+.pilot-closing .shell {
+  position: relative;
+}
+.pilot-closing h2 {
+  font-size: clamp(36px, 4.2vw, 56px) !important;
+}
+.pilot-closing p {
+  color: var(--pilot-copy);
+  font-size: 16px;
+  line-height: 1.9;
+  max-width: 625px;
+  margin-top: 25px;
+}
+.pilot-closing-actions {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 31px;
+}
+.pilot-footer {
+  border-top: 1px solid var(--pilot-line);
+  padding-block: 34px;
+}
+.pilot-footer .shell {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 28px;
+  align-items: center;
+}
+.pilot-footer p {
+  color: #92a4b6;
+  font-size: 11px;
+  margin-top: 10px;
+}
+.pilot-footer nav {
+  display: flex;
+  gap: 24px;
+  color: #b4bfcb;
+  font-size: 12px;
+  flex-wrap: wrap;
+}
+.pilot-footer .shell > span {
+  color: #92a4b6;
+  font-size: 11px;
+}
+@media (min-width: 1400px) {
+  .pilot-hero {
+    padding-top: 96px;
+  }
+}
+@media (max-width: 1050px) {
+  .pilot-hero-grid {
+    gap: 34px;
+  }
+  .pilot-hero h1 {
+    font-size: 49px;
+  }
+  .pilot-hero-actions {
+    gap: 18px;
+  }
+  .pilot-desktop-nav {
+    gap: 20px;
+  }
+  .pilot-section-heading,
+  .pilot-offer-heading,
+  .pilot-security-grid,
+  .pilot-workflow-content {
+    gap: 40px;
+  }
+  .pilot-hero-bottom > div {
+    gap: 24px;
+  }
+}
+@media (max-width: 800px) {
+  .pilot-page .shell {
+    padding-inline: 24px;
+  }
+  .pilot-nav-inner {
+    height: 70px;
+    gap: 14px;
+  }
+  .pilot-brand-systems {
+    display: none;
+  }
+  .pilot-desktop-nav {
+    display: none;
+  }
+  .pilot-menu {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 0;
+    background: transparent;
+    color: #b4bfcb;
+    font-size: 12px !important;
+  }
+  .pilot-nav-cta {
+    margin-left: auto;
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+  .pilot-hero {
+    padding-top: 45px;
+  }
+  .pilot-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .pilot-hero h1 {
+    font-size: clamp(42px, 7.5vw, 61px);
+    max-width: 600px;
+  }
+  .pilot-hero-copy > p {
+    font-size: 17px;
+  }
+  .pilot-hero-actions {
+    margin-top: 25px;
+  }
+  .pilot-console {
+    max-width: 600px;
+    width: 100%;
+  }
+  .pilot-console-body {
+    min-height: 0;
+  }
+  .pilot-event p {
+    min-height: 0;
+  }
+  .pilot-hero-bottom {
+    margin-top: 35px;
+    align-items: start;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .pilot-hero-bottom > div {
+    flex-wrap: wrap;
+    gap: 12px 26px;
+  }
+  .pilot-section {
+    padding-block: 68px;
+  }
+  .pilot-section-heading {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-bottom: 32px;
+  }
+  .pilot-section-heading > p {
+    max-width: 600px;
+  }
+  .pilot-pillars {
+    grid-template-columns: 1fr;
+  }
+  .pilot-pillars article,
+  .pilot-pillars article + article {
+    border-left: 0;
+    padding: 26px 0;
+  }
+  .pilot-pillars article + article {
+    border-top: 1px solid var(--pilot-line);
+  }
+  .pilot-pillar-index {
+    margin-bottom: 20px;
+  }
+  .pilot-pillars p {
+    max-width: 600px;
+  }
+  .pilot-walkthrough-grid,
+  .pilot-workflow-content,
+  .pilot-offer-heading,
+  .pilot-security-grid,
+  .pilot-faq-grid {
+    grid-template-columns: 1fr;
+  }
+  .pilot-steps {
+    border-right: 0;
+    border-bottom: 1px solid #243f5a25;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 12px;
+  }
+  .pilot-steps button {
+    font-size: 12px;
+    gap: 9px;
+    padding: 13px 9px;
+  }
+  .pilot-steps button svg {
+    width: 13px;
+  }
+  .pilot-step-detail {
+    padding: 25px;
+    min-height: 330px;
+  }
+  .pilot-observer-note {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .pilot-workflow-content {
+    gap: 30px;
+    min-height: 0;
+  }
+  .pilot-workflow-content h3 {
+    font-size: 29px;
+    max-width: 600px;
+  }
+  .pilot-workflow-select {
+    gap: 24px;
+  }
+  .pilot-workflow-select button {
+    font-size: 17px;
+    gap: 12px;
+  }
+  .pilot-offer-heading {
+    gap: 28px;
+  }
+  .pilot-offer-heading > div {
+    max-width: 550px;
+  }
+  .pilot-offer-steps {
+    gap: 25px;
+  }
+  .pilot-offer-steps h3 {
+    font-size: 19px;
+  }
+  .pilot-security-grid,
+  .pilot-faq-grid {
+    gap: 34px;
+  }
+}
+@media (max-width: 480px) {
+  .pilot-page .shell {
+    padding-inline: 20px;
+  }
+  .pilot-hero h1 {
+    font-size: 43px;
+  }
+  .pilot-hero-copy > p {
+    font-size: 16px;
+  }
+  .pilot-availability {
+    font-size: 10px;
+    gap: 7px;
+    margin-bottom: 23px;
+  }
+  .pilot-hero-proof {
+    font-size: 10px;
+    gap: 10px;
+  }
+  .pilot-button {
+    font-size: 13px;
+    padding: 14px 16px;
+    gap: 12px;
+  }
+  .pilot-console-top {
+    padding-inline: 16px;
+  }
+  .pilot-console-top > span:last-child {
+    font-size: 8px;
+  }
+  .pilot-console-body {
+    padding: 18px 16px;
+  }
+  .pilot-switch {
+    padding-inline: 12px;
+  }
+  .pilot-agent-line h2 {
+    font-size: 17px;
+  }
+  .pilot-event p {
+    font-size: 21px;
+  }
+  .pilot-owner {
+    font-size: 10px;
+    gap: 12px;
+  }
+  .pilot-page section h2 {
+    font-size: 35px;
+  }
+  .pilot-workflow-select {
+    gap: 22px;
+  }
+  .pilot-workflow-select button {
+    font-size: 15px;
+    gap: 8px;
+  }
+  .pilot-workflow-select button svg {
+    width: 14px;
+  }
+  .pilot-offer-heading h2 {
+    font-size: 43px !important;
+  }
+  .pilot-offer-steps {
+    grid-template-columns: 1fr;
+  }
+  .pilot-offer-steps article {
+    display: grid;
+    grid-template-columns: 25px 1fr;
+    column-gap: 12px;
+  }
+  .pilot-offer-steps article > span {
+    grid-row: span 2;
+    padding-top: 3px;
+  }
+  .pilot-offer-steps h3 {
+    margin-top: 0;
+  }
+  .pilot-inclusions {
+    gap: 15px;
+  }
+  .pilot-inclusions span {
+    font-size: 10px;
+  }
+  .pilot-closing h2 {
+    font-size: 35px !important;
+  }
+  .pilot-footer nav {
+    gap: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .pilot-page *,
+  .pilot-page *::before,
+  .pilot-page *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* The preview title is a record label, not a marketing section heading. */
+.pilot-page .pilot-console h2 {
+  font-size: 18px;
+  line-height: 1.3;
+  letter-spacing: -0.4px;
+}
+.pilot-page .pilot-hero-grid > *,
+.pilot-page .pilot-workflow-content > *,
+.pilot-page .pilot-walkthrough-grid > * {
+  min-width: 0;
+}
