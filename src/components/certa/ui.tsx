@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-export const DEMO_LINK = "https://calendly.com/abelassefa788/introduction";
+export const DEMO_LINK = "https://calendly.com/abelassefa788/cypress-vision-software-demo";
 
 export function Card({ children, className }: { children: ReactNode; className?: string }) {
   return (

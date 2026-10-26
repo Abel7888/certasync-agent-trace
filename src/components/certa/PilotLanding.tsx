@@ -83,7 +83,7 @@ function Header() {
           <a href="#solutions">Pilot workflows</a>
           <a href="#security">Security</a>
         </nav>
-        <a className="pilot-nav-cta" href="#pilot">
+        <a className="pilot-nav-cta" href={DEMO_LINK}>
           Explore a pilot <ArrowUpRight size={15} aria-hidden="true" />
         </a>
         <button
@@ -106,7 +106,7 @@ function Header() {
           <a href="#how-it-works">How it works</a>
           <a href="#solutions">Pilot workflows</a>
           <a href="#security">Security</a>
-          <a href="#pilot">Explore a pilot</a>
+          <a href={DEMO_LINK}>Explore a pilot</a>
         </nav>
       )}
     </header>
@@ -617,7 +617,7 @@ function FAQ() {
   );
 }
 function Closing({ selected }: { selected: Workflow }) {
-  const email = `mailto:info@certasystem.xyz?subject=${encodeURIComponent(`Certa ${workflows[selected].label.toLowerCase()} pilot introduction`)}`;
+  const email = `mailto:abelassefa19@gmail.com?subject=${encodeURIComponent(`Certa ${workflows[selected].label.toLowerCase()} pilot introduction`)}`;
   return (
     <>
       <section className="pilot-section pilot-closing">
@@ -688,7 +688,7 @@ export function PilotLanding() {
                 behind it.
               </p>
               <div className="pilot-hero-actions">
-                <a className="pilot-button" href="#pilot">
+                <a className="pilot-button" href={DEMO_LINK}>
                   Explore a complimentary pilot
                   <ArrowUpRight size={17} aria-hidden="true" />
                 </a>
